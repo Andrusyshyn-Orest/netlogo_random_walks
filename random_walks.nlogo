@@ -93,7 +93,7 @@ to go
     ]
   ]
 
-  if num = 300 and step-size = 1 [
+  if num = 3000 and step-size = 1 [
     if rw-type = "deterministic" [
       if ticks != 0 [
         if (ticks mod 1000 = 0) [
@@ -347,7 +347,7 @@ r
 r
 0
 4
-3.07
+4.0
 0.01
 1
 NIL
@@ -907,14 +907,32 @@ NetLogo 6.2.2
     <metric>mean-displacement</metric>
     <enumeratedValueSet variable="r">
       <value value="0"/>
-      <value value="0.7"/>
-      <value value="3.7"/>
+      <value value="1"/>
       <value value="4"/>
     </enumeratedValueSet>
     <steppedValueSet variable="step-size" first="1" step="0.04" last="3"/>
     <enumeratedValueSet variable="num">
       <value value="300"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="rw-type">
+      <value value="&quot;deterministic&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="experiment_for_deterministic_num" repetitions="4" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks-till-border</metric>
+    <metric>max-diff-msd</metric>
+    <metric>mean-displacement</metric>
+    <enumeratedValueSet variable="r">
+      <value value="0"/>
+      <value value="1"/>
+      <value value="4"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="step-size">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="num" first="50" step="5" last="300"/>
     <enumeratedValueSet variable="rw-type">
       <value value="&quot;deterministic&quot;"/>
     </enumeratedValueSet>
