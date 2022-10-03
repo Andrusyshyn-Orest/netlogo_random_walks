@@ -93,7 +93,7 @@ to go
     ]
   ]
 
-  if num = 3000 and step-size = 1 [
+  if num = 300 and step-size = 1 [
     if rw-type = "deterministic" [
       if ticks != 0 [
         if (ticks mod 1000 = 0) [
